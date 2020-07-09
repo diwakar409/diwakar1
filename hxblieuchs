@@ -1,0 +1,15 @@
+[0;1;32m●[0m jenkins.service - LSB: Jenkins Automation Server
+   Loaded: loaded (/etc/rc.d/init.d/jenkins; generated)
+   Active: [0;1;32mactive (running)[0m since Thu 2020-07-09 16:45:12 UTC; 30s ago
+     Docs: man:systemd-sysv-generator(8)
+  Process: 51564 ExecStart=/etc/rc.d/init.d/jenkins start (code=exited, status=0/SUCCESS)
+    Tasks: 35 (limit: 4936)
+   Memory: 328.6M
+   CGroup: /system.slice/jenkins.service
+           └─51585 /etc/alternatives/java -Dcom.sun.akuma.Daemon=daemonized -Djava.awt.headless=true -DJENKINS_HOME=/var/lib/jenkins -jar /usr/lib/jenkins/jenkins.war --logfile=/var/log/jenkins/jenkins.log --webroot=/var/cache/jenkins/war --daemon --httpPort=8080 --debug=5 --handlerCountMax=100 --handlerCountMaxIdle=20
+
+Jul 09 16:45:11 ip-172-31-44-127.ap-south-1.compute.internal systemd[1]: Starting LSB: Jenkins Automation Server...
+Jul 09 16:45:11 ip-172-31-44-127.ap-south-1.compute.internal runuser[51571]: pam_unix(runuser:session): session opened for user jenkins by (uid=0)
+Jul 09 16:45:12 ip-172-31-44-127.ap-south-1.compute.internal runuser[51571]: pam_unix(runuser:session): session closed for user jenkins
+Jul 09 16:45:12 ip-172-31-44-127.ap-south-1.compute.internal jenkins[51564]: Starting Jenkins [  OK  ]
+Jul 09 16:45:12 ip-172-31-44-127.ap-south-1.compute.internal systemd[1]: Started LSB: Jenkins Automation Server.
